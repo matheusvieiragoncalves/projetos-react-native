@@ -1,10 +1,14 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
+import './src/config/ReactotronConfig';
+
+console.tron.log('funciona por favor ;-; teste');
+
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Hello World Mobile</Text>
+      <Text>Hello World Mobilez</Text>
     </View>
   );
 }
