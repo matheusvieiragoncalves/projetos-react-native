@@ -1,23 +1,10 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
 
 import './src/config/ReactotronConfig';
+import Routes from './src/routes';
 
-console.tron.log('funciona por favor ;-; teste');
+import './src/config/StatusBarConfig';
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Hello World Mobilez</Text>
-    </View>
-  );
+  return <Routes />;
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#7159c1',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
