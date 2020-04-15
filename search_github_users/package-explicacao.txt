@@ -17,7 +17,7 @@
     "react-native-reanimated": "~1.7.0",
     "react-native-safe-area-context": "0.7.3",
     "react-native-screens": "~2.2.0",
-    "react-native-vector-icons": "^6.6.0",
+    "react-native-vector-icons": "^6.6.0", //possibilita a utilização de icone. Após intala-la é necessário rodar: react-native link react-native-vector-icons
     "react-native-web": "~0.11.7",
     "react-navigation": "^4.3.7",
     "react-navigation-stack": "^2.3.11",
@@ -30,3 +30,6 @@
   },
   "private": true
 }
+
+
+
