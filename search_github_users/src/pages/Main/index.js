@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Keyboard, ActivityIndicator } from 'react-native';
+import { Keyboard, ActivityIndicator, AsyncStorage } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
 import api from '../../services/api';
@@ -24,6 +24,32 @@ export default class Main extends Component {
     users: [],
     loading: false,
   };
+
+  async componentDidMount() {
+    try {
+      const users = await AsyncStorage.getItem('users');
+      if (users) {
+        this.setState({ users: JSON.parse(users) });
+        console.tron.log('teste:', users);
+      }
+    } catch (error) {
+      console.tron.log('deu erro no GET');
+      // Error retrieving data
+    }
+  }
+
+  async componentDidUpdate(_, prevState) {
+    const { users } = this.state;
+
+    if (prevState.users !== users) {
+      try {
+        await AsyncStorage.setItem('users', JSON.stringify(users));
+      } catch (error) {
+        console.tron.log('deu erro no SET');
+        // Error saving data
+      }
+    }
+  }
 
   handleAddUser = async () => {
     const { users, newUser } = this.state;
