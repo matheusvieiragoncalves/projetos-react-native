@@ -4,13 +4,14 @@ import { RectButton } from 'react-native-gesture-handler';
 export const Container = styled.View`
   flex: 1;
   padding: 30px;
+  background: #fff;
 `;
 
 export const Form = styled.View`
   flex-direction: row;
   padding-bottom: 20px;
-  border-bottom-width: 5px;
-  border-color: #eee;
+  border-bottom-width: 1px;
+  border-color: #cecece;
   box-shadow: 10px 5px 5px black;
 `;
 
